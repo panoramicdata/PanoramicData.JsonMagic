@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using PanoramicData.JsonMagic.Web;
 using PanoramicData.JsonMagic.Web.Interfaces;
 using PanoramicData.JsonMagic.Web.Services;
 using Sotsera.Blazor.Toaster.Core.Models;
