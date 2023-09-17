@@ -25,10 +25,9 @@ jobs:
               run: touch release/wwwroot/.nojekyll
 
             - name: Commit wwwroot to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@3.7.1
+              uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: master
+                  BRANCH: main
                   FOLDER: release/wwwroot
-
-# Based on https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages
+                  SINGLE_COMMIT: true
