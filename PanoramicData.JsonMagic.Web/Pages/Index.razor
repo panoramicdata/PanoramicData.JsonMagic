@@ -1,0 +1,26 @@
+﻿@page "/"
+
+<div class="container-fluid main-wrapper">
+	<div class="row h-100">
+		<div class="col-6" style="background: green;">
+			<StandaloneCodeEditor @ref="_editor"
+								  ConstructionOptions="EditorConstructionOptions"
+			CssClass="h-100"
+			/>
+		</div>
+		<div class="col-6">
+			<form id="">
+				<button class="btn btn-primary" @onclick="ButtonClickAsync">Download</button>
+				<label>
+					File Name
+				</label>
+				<input type="text" @bind-value="_fileName" />
+				<label>
+					Sheet Name
+				</label>
+				<input type="text" @bind-value="_sheetName" />
+			</form>
+
+		</div>
+	</div>
+</div>
