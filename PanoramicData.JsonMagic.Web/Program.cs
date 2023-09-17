@@ -19,4 +19,6 @@ builder.Services
 		config.HideTransitionDuration = 500;
 	});
 
-await builder.Build().RunAsync();
+await builder
+	.Build()
+	.RunAsync();
