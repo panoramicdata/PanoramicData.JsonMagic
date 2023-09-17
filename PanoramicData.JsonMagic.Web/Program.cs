@@ -5,7 +5,7 @@ using PanoramicData.JsonMagic.Web.Services;
 using Sotsera.Blazor.Toaster.Core.Models;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<PanoramicData.JsonMagic.Web.App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services
