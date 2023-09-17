@@ -41,7 +41,8 @@ jobs:
             - name: Deploy wwwroot to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  BRANCH: main
+                  ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  BASE_BRANCH: main # The branch the action should deploy from.
+                  BRANCH: gh-pages # The branch the action should deploy to.
                   FOLDER: release/wwwroot
                   SINGLE_COMMIT: true
