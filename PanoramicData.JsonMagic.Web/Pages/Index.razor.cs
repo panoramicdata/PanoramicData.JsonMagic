@@ -100,7 +100,10 @@ public partial class Index
 		using var magicSpreadsheet = new MagicSpreadsheet(memoryStream, new Options { });
 		try
 		{
-			magicSpreadsheet.AddSheet(items, sheetName);
+			var objectItems = items
+				.Select(jObject => new Extended<object>(new(), jObject.ToObject<Dictionary<string, object?>>()))
+				.ToList();
+			magicSpreadsheet.AddSheet(objectItems, sheetName);
 			magicSpreadsheet.Save();
 		}
 		catch (Exception ex)
